@@ -35,7 +35,6 @@
 
         <div class="relative z-10 px-4 mx-auto -mt-16 max-w-7xl sm:px-6 lg:px-8">
             @empty(!$latest_news)
-
                 <div
                     class="flex flex-col h-full overflow-hidden transition-all duration-300 border shadow-2xl md:flex-row rounded-2xl bg-saas-darkGray border-saas-gold/30 hover:border-saas-gold/60 group">
 
@@ -49,7 +48,7 @@
                         @endif
                         <div class="absolute top-4 left-4">
                             <span
-                                class="px-3 py-1 text-xs font-bold tracking-widest text-[#141009] uppercase rounded-full bg-saas-gold">
+                                class="px-3 py-1 text-xs font-bold tracking-widest text-[#141009] uppercase rounded-full bg-saas-gold-400">
                                 Featured
                             </span>
                         </div>
@@ -59,7 +58,7 @@
                         <div class="flex items-center mb-4 space-x-2 text-sm">
                             <span class="font-bold tracking-wider uppercase text-saas-gold-400">Events</span>
                             <span class="text-gray-600">•</span>
-                            <span class="text-gray-400">{{ $latest_news->published_at }}</span>
+                            <span class="text-gray-400">{{ \Carbon\Carbon::parse($latest_news->published_at)->format('d M Y - H:i') }}</span>
                         </div>
 
                         <h2
@@ -70,7 +69,7 @@
                             {{ $latest_news->excerpt }}
                         </p>
 
-                        <a href="#"
+                        <a href="{{ route('news.show', $latest_news->slug) }}"
                             class="inline-flex items-center mt-auto font-bold transition-colors text-saas-gold hover:text-saas-gold-400">
                             Read Full Story
                             <svg class="w-5 h-5 ml-2 transition-transform transform group-hover:translate-x-2"
@@ -118,7 +117,7 @@
                     <div
                         class="flex flex-col h-full overflow-hidden transition-all duration-300 border rounded-2xl bg-saas-darkGray border-gray-800 transform hover:-translate-y-1 hover:border-saas-gold/50 group">
                         <div class="relative aspect-video overflow-hidden bg-[#1c160c]">
-                            <img src="{{ Storage::url($latest_news->featured_image) }}" alt="Travel News"
+                            <img src="{{ Storage::url($item->featured_image) }}" alt="Travel News"
                                 class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105">
                         </div>
 
@@ -126,16 +125,16 @@
                             <div class="flex items-center mb-4 space-x-2 text-xs">
                                 <span class="font-bold tracking-wider uppercase text-saas-gold-400">Event</span>
                                 <span class="text-gray-600">•</span>
-                                <span class="text-gray-400">{{ $latest_news->published_at }}</span>
+                                <span class="text-gray-400">{{ $item->published_at }}</span>
                             </div>
 
                             <h3
                                 class="mb-3 text-xl font-bold text-white leading-snug hover:text-saas-gold transition-colors cursor-pointer">
-                                {{ $latest_news->title }}
+                                {{ $item->title }}
                             </h3>
-                            <p class="mb-6 text-gray-400">{{ $latest_news->excerpt }}</p>
+                            <p class="mb-6 text-gray-400">{{ $item->excerpt }}</p>
 
-                            <a href="#"
+                            <a href="{{ route('news.show', $item->slug) }}"
                                 class="inline-flex items-center mt-auto font-semibold transition-colors text-saas-gold-400 hover:text-saas-gold-400">
                                 Read Story
                                 <svg class="w-4 h-4 ml-2 transition-transform transform group-hover:translate-x-1"
