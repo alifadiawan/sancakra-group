@@ -22,9 +22,9 @@
                         class="px-3 py-2 text-sm font-medium transition-colors {{ request()->is('news') ? 'text-yellow-500' : 'text-white hover:text-yellow-500' }}">
                         News
                     </a>
-                    <a href=""
-                        class="px-3 py-2 text-sm font-medium transition-colors {{ request()->is('contact') ? 'text-yellow-500' : 'text-white hover:text-yellow-500' }}">
-                        Contact
+                    <a href="{{ route('career') }}"
+                        class="px-3 py-2 text-sm font-medium transition-colors {{ request()->is('career') ? 'text-yellow-500' : 'text-white hover:text-yellow-500' }}">
+                        Career
                     </a>
                 </div>
             </div>
