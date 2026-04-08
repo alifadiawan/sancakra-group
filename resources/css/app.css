@@ -1,0 +1,196 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-saas-black: #121212;
+    --color-saas-darkGray: #222222;
+
+    --color-saas-gold-50: #fffdf5;
+    --color-saas-gold-100: #fff7db;
+    --color-saas-gold-200: #fcefb5;
+    --color-saas-gold-300: #f7df7a;
+    --color-saas-gold-400: #ebc94a;
+    --color-saas-gold-500: #d4af37;
+    --color-saas-gold-600: #b8932f;
+    --color-saas-gold-700: #947527;
+    --color-saas-gold-800: #785f23;
+    --color-saas-gold-900: #644f21;
+    --color-saas-gold-950: #3a2d10;
+
+    --bg-saas-gold-50 {
+        background-color: #fffdf5
+    }
+
+    --bg-saas-gold-100 {
+        background-color: #fff7db
+    }
+
+    --bg-saas-gold-200 {
+        background-color: #fcefb5
+    }
+
+    --bg-saas-gold-300 {
+        background-color: #f7df7a
+    }
+
+    --bg-saas-gold-400 {
+        background-color: #ebc94a
+    }
+
+    --bg-saas-gold-500 {
+        background-color: #d4af37
+    }
+
+    --bg-saas-gold-600 {
+        background-color: #b8932f
+    }
+
+    --bg-saas-gold-700 {
+        background-color: #947527
+    }
+
+    --bg-saas-gold-800 {
+        background-color: #785f23
+    }
+
+    --bg-saas-gold-900 {
+        background-color: #644f21
+    }
+
+    --bg-saas-gold-950 {
+        background-color: #3a2d10
+    }
+
+    --bg-saas-gold\/5 {
+        background-color: #d4af370d
+    }
+
+    --bg-saas-gold\/10 {
+        background-color: #d4af371a
+    }
+
+    --bg-saas-gold\/20 {
+        background-color: #d4af3733
+    }
+
+    --bg-saas-gold\/30 {
+        background-color: #d4af374d
+    }
+
+    --bg-saas-gold\/40 {
+        background-color: #d4af3766
+    }
+
+    --bg-saas-gold\/50 {
+        background-color: #d4af3780
+    }
+
+    --bg-saas-gold\/60 {
+        background-color: #d4af3799
+    }
+
+    --bg-saas-gold\/70 {
+        background-color: #d4af37b3
+    }
+
+    --bg-saas-gold\/80 {
+        background-color: #d4af37cc
+    }
+
+    --bg-saas-gold\/90 {
+        background-color: #d4af37e6
+    }
+
+
+     --border-saas-gold-50 {
+        border-color: #fffdf5
+    }
+
+    --border-saas-gold-100 {
+        border-color: #fff7db
+    }
+
+    --border-saas-gold-200 {
+        border-color: #fcefb5
+    }
+
+    --border-saas-gold-300 {
+        border-color: #f7df7a
+    }
+
+    --border-saas-gold-400 {
+        border-color: #ebc94a
+    }
+
+    --border-saas-gold-500 {
+        border-color: #d4af37
+    }
+
+    --border-saas-gold-600 {
+        border-color: #b8932f
+    }
+
+    --border-saas-gold-700 {
+        border-color: #947527
+    }
+
+    --border-saas-gold-800 {
+        border-color: #785f23
+    }
+
+    --border-saas-gold-900 {
+        border-color: #644f21
+    }
+
+    --border-saas-gold-950 {
+        border-color: #3a2d10
+    }
+
+    --border-saas-gold\/5 {
+        border-color: #d4af370d
+    }
+
+    --border-saas-gold\/10 {
+        border-color: #d4af371a
+    }
+
+    --border-saas-gold\/20 {
+        border-color: #d4af3733
+    }
+
+    --border-saas-gold\/30 {
+        border-color: #d4af374d
+    }
+
+    --border-saas-gold\/40 {
+        border-color: #d4af3766
+    }
+
+    --border-saas-gold\/50 {
+        border-color: #d4af3780
+    }
+
+    --border-saas-gold\/60 {
+        border-color: #d4af3799
+    }
+
+    --border-saas-gold\/70 {
+        border-color: #d4af37b3
+    }
+
+    --border-saas-gold\/80 {
+        border-color: #d4af37cc
+    }
+
+    --border-saas-gold\/90 {
+        border-color: #d4af37e6
+    }
+
+}
